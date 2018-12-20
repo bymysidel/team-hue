@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace = "com.hue.ssm.mapper.BorrowMapper">
+    <insert id="addBorrow" parameterType="Borrow">
+        <selectKey keyProperty="borrowId" resultType="int" order="AFTER">
+            SELECT LAST_INSERT_ID()   
+        </selectKey>
+        insert into borrow(b_bookId,borrowerId,operator,borrowTime,returnDeadline)
+        values(#{b_bookId}, #{borrowerId}, #{operator}, #{borrowTime}, #{returnDeadline})
+    </insert>
+
+
+    <update id="updateBorrow" parameterType="Borrow">
+        update borrow set
+            b_bookId = #{b_bookId},
+            borrowerId = #{borrowerId},
+            operator = #{operator},
+            borrowTime = #{borrowTime},
+            returnDeadline = #{returnDeadline},
+            returnTime = #{returnTime}
+         where borrowId = #{borrowId}
+    
+    
+    </update>
+    
+    <select id="selectBorrowById" parameterType="int" resultType="Borrow">
+        select * from borrow where borrowId = #{borrowId}  
+    </select>
+    
+    <select id="selectBorrowByBorrowerId" parameterType="int" resultType="Borrow">
+        select * from borrow where borrowerId = #{borrowerId}
+    
+    </select>
+    
+
+
+
+
+
+
+</mapper>

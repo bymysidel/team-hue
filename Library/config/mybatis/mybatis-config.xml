@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 全局setting -->
+    
+    
+    <!-- 设置类型的别名 -->
+    <!-- 与spring整合，批量扫描 -->
+    <typeAliases>
+        <package name="com.hue.ssm.pojo"/>
+    </typeAliases>
+    
+<!--     设置连接数据库的环境   与spring整合后，该信息由spring管理
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            数据源
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/library?characterEncoding=utf-8&amp;useSSL=false" />
+                <property name="username" value="root" />
+                <property name="password" value="rrl060710" />
+            </dataSource>
+        </environment>
+    </environments> -->
+
+</configuration> 

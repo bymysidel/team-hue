@@ -1,0 +1,172 @@
+@CHARSET "UTF-8";
+
+
+/*分页浮动条*/
+        .page-nav{
+                position:fixed;
+                margin-top:-3em;
+                height:3em;
+                margin-left: 0.5em;
+                margin-right: 0.5em;                
+        }
+        .page-nav a{
+            color: #8b8ba3;
+        }
+        li{
+            display: inline;
+            list-style: none;
+        }
+        /*内容展示面板容器*/
+        .show-bar{
+            margin-top: 2em;
+        }
+         .panel-col{
+             display:block;
+             height:24em;
+             width: 74em;
+             margin-left: 2em;
+             margin-top: 2em;
+             
+        }
+        
+        .panel-row{
+            display:inline-block;
+           margin-left:1em;
+           height:20em;
+           width:34em;
+            
+          
+            background-color:#24252a;
+           
+            border-radius: 0.5em;
+            box-shadow: 8px 8px 5px #b8b6b6;
+        }
+        
+       
+         .cover img{
+           
+            height: 14em;
+            width: 10em;
+            border-radius:0.5em;
+            -moz-border-radius: 0.5em;
+            -webkit-border-radius: 0.5em;
+           
+        }
+        .cover{
+            margin-top:3em;
+            margin-left:1em;
+            height: 14em;
+            width: 10em;
+            border: 0px solid #c1c1c1;
+            border-radius: 0.5em;
+        }
+        .book-info{
+        display:inline-block;
+        position:absolute;
+            padding:1em;
+            margin-top:-18em;
+            margin-left:16em;
+            height:14em;
+            width: 17em;
+           /*  border: 1px solid #c1c1c1;
+            border-radius: 0.5em; */
+            font-size: 12px;
+            color: #fff;
+        } 
+        .operate{
+        position:absolute;
+            display:inline-block;
+            margin-top: -14em;
+            margin-left: 27em;
+            height:14em;
+            width:6em;
+            /* border: 1px solid #c1c1c1; */
+        } 
+        .operate a{
+            text-decoration: none;
+        }
+        .operate a button{
+            padding: 0.5em;
+            border:1px solid #fff;
+            border-radius:0.25em;
+            margin-top:1.5em;
+            margin-left:1em;
+            background-color: #54a7c8;  /*#54a7c8*/
+            color: #fff;
+            outline: none;
+        }
+        .return-btn:hover{
+            background-color: #6fd6ff;
+            
+        }
+        .renew-btn:hover{
+            background-color: #efe936;
+            border: border:1px solid #fff;
+        }
+        .moreonce-btn:hover{
+            background-color: #5fd45f;
+            border: border:1px solid #fff;
+        }
+        .transaction-panel{
+            position: fixed;
+            width:25em;
+            height:30em;
+            border:1px solid #fff;
+            top:5em;
+            left:35em;
+            border:2px solid pink;
+            border-radius:0.5em;
+            background-color: #fff;
+            opacity: 0.9;
+            display: none;
+        }
+        .tx-cancel-btn{
+            position: absolute;
+            right:-1em;
+            top:-1em;
+            width: 2em;
+            height: 2em;
+            border-radius:1em;
+            border-top:3px solid pink;
+            border-right:3px solid pink;
+            border-bottom:0px solid pink;
+            border-left:0px solid pink; 
+           
+            background-color: #fff;
+            outline: none;
+        }
+        .tx-cancel-btn:hover{
+            background-color: #ffd0d0;
+        
+        }
+        
+        .bg-cover{
+            position:fixed;
+            top:0;
+            left:0;
+            display: none;
+            width: 100%;
+            height: 100%;
+            opacity:0.3;
+            background-color: black;
+        }
+        .hideMe{
+            display: none;
+            
+        }
+        .showMe{
+            display:block;
+        }
+            
+        .highlight{
+             color: #1bf600;
+             font-weight: 700;
+        }
+        /*在借状态*/
+        .inBorrowing{
+            background-color: #7686d9;
+        }
+        /*已还状态*/
+        .hasReturned{
+            background-color: #80ec80;
+        }

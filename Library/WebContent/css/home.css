@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+body{
+	width:100%;
+	background-color: #e7e7e7;
+}
+th{
+      text-align: center;
+}
+.highlight{
+     color: #1bf600;
+     font-weight: 700;
+}
+.sign-in-btn:hover{
+     text-decoration: none;
+}
+td{
+	text-align: center;
+}
+       

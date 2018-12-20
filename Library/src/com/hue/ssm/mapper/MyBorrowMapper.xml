@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hue.ssm.mapper.MyBorrowMapper">
+    <select id="selectMyBorrowById" parameterType="int" resultType="MyBorrow">
+        
+        select u.userId,u.userName,u.sex,u.dept,
+                book.bookId,book.bookName,book.author,book.press,book.category,book.price,book.status,
+                borrow.borrowId,borrow.borrowTime,borrow.returnDeadline,borrow.returnTime
+           from (select * from user where userId = #{userId}) as u inner join borrow on u.userId = borrow.borrowerId
+                 inner join book on borrow.b_bookId = book.bookId    
+    </select>
+    
+    <!-- 查询一页的myBorrow   startIndex指根据当前页数和页容量计算出来的开始下标 -->
+    <select id="selectPage" parameterType="HashMap" resultType="MyBorrow">
+        select u.userId,u.userName,u.sex,u.dept,
+                book.bookId,book.bookName,book.author,book.press,book.category,book.price,book.status,
+                borrow.borrowId,borrow.borrowTime,borrow.returnDeadline,borrow.returnTime
+           from (select * from user where userId = #{userId}) as u inner join borrow on u.userId = borrow.borrowerId
+                 inner join book on borrow.b_bookId = book.bookId  
+               order by book.status desc limit #{startIndex},#{pageSize}
+    </select>
+</mapper>
